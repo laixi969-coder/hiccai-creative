@@ -63,7 +63,7 @@ metadata:
 
 ## 三条硬门槛（全模式强制，任一不过不得输出成品）
 
-本机若存在 `~/.claude/skills/hiccai-wenan/SKILL.md` 与 `~/.claude/skills/hiccai-xhs/SKILL.md`，涉及对应内容时先读取原文并全量执行；以下为最低标准，原文更严时以原文为准。
+本机若存在 `~/.workbuddy/skills/hiccai-wenan/SKILL.md` 与 `~/.workbuddy/skills/hiccai-xhs/SKILL.md`，涉及对应内容时先读取原文并全量执行；以下为最低标准，原文更严时以原文为准。
 
 ### 门槛一：洞察标准（现象洞察，Ideaboom 标准）
 

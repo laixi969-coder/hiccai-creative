@@ -8,9 +8,9 @@
 
 ## 方法资产（四资产全链路）
 - **72变**（`references/creative-72-transformations/`）：Step 2 创意方向选族选卡，2-3 个不同族
-- **Young 5 步 + 组合机**（`references/creative-methods/young-five-steps/`）：Step 1 策略诊断 + Step 2 Big Idea 生成
-- **Gladwell 三法则**（`references/creative-methods/gladwell-tipping/`）：Step 2 传播机制 + Step 3 社媒文案的附着力
-- **Heath SUCCESs**（`references/creative-methods/heath-stickiness/`）：Step 3 文案/宣言过「6 问自检」
+- **创意生成五步法 + 组合机**（`references/creative-methods/five-step-ideation/`）：Step 1 策略诊断 + Step 2 Big Idea 生成
+- **传播三法则**（`references/creative-methods/tipping-three-laws/`）：Step 2 传播机制 + Step 3 社媒文案的附着力
+- **黏性六原则 SUCCESs**（`references/creative-methods/stickiness-succes/`）：Step 3 文案/宣言过「6 问自检」
 
 ## 第一步交付物（定义）
 **四步走全案**（策略层→创意方向→文案层→AI生图Prompt），每步确认后再往下。交付正文是每一步的成品（策略主张/方向/文案/Prompt），策略诊断是内部步骤。
@@ -51,7 +51,7 @@
 
 每组文案标注：击中的心理动因 + 转译的产品利益 + 适合的渠道场景
 
-全部文案过「Heath SUCCESs 6 问自检」+「门槛二」。
+全部文案过「SUCCESs 6 问自检」+「门槛二」。
 
 **Step 4 — AI图像Prompt套组（Designer视角）**
 

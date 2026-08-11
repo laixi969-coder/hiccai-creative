@@ -8,7 +8,7 @@
 需要批量生产小红书/抖音爆款标题
 
 ## 方法资产
-- **Heath Unexpected**（`references/creative-methods/heath-stickiness/`）：每个标题必须制造「知识缺口」，标题公式与「缺口制造」三连（开场反常识/中段留缺口/收尾闭合）对齐
+- **黏性原则 · Unexpected**（`references/creative-methods/stickiness-succes/`）：每个标题必须制造「知识缺口」，标题公式与「缺口制造」三连（开场反常识/中段留缺口/收尾闭合）对齐
 - **72变**（`references/creative-72-transformations/`）：标题方向可借「G 叙事（变夸张/变误会/变反转）/ D 性格（变魔性）」族找切入点（内部使用）
 
 ## 第一步交付物（定义）

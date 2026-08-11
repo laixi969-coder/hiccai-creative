@@ -9,8 +9,8 @@
 
 ## 方法资产
 - **72变**（`references/creative-72-transformations/`）：IP 定调可用「D 性格（变可爱/变魔性）/ E IP（变同类/变IP）」族；内容方向用「H 杠杆（变节日/应时而变）」族
-- **Gladwell 附着力**（`references/creative-methods/gladwell-tipping/`）：爆款钩子过「附着力 5 问」，KOL 配比用「个别人物法则」（联络员/内行/推销员）
-- **Heath SUCCESs**（`references/creative-methods/heath-stickiness/`）：标题/笔记过 SUCCESs，制造知识缺口（Unexpected）
+- **附着力法则**（`references/creative-methods/tipping-three-laws/`）：爆款钩子过「附着力 5 问」，KOL 配比用「个别人物法则」（联络员/内行/推销员）
+- **黏性六原则 SUCCESs**（`references/creative-methods/stickiness-succes/`）：标题/笔记过 SUCCESs，制造知识缺口（Unexpected）
 
 ## 第一步交付物（定义）
 **完整小红书增长方案**（趋势洞察→IP定调→核心玩法→三阶段节奏），含每阶段的爆款笔记 Demo。交付正文是方案本身，不含分析方法讲解。

@@ -91,9 +91,9 @@ git clone https://github.com/laixi969-coder/hiccai-creative.git \
 | 资产 | 核心能力 | 位置 |
 |---|---|---|
 | **72变创意卡牌** | 72 个「变 X」方向，8 大主题，选族选卡产方向 | `references/creative-72-transformations/` |
-| **创意生成五步法** | 吸收→咀嚼→孵化→产出→检验 + 「旧元素新组合」组合机 | `references/creative-methods/young-five-steps/` |
-| **传播三法则** | 个别人物（谁传）+ 附着力（传什么）+ 环境威力（在哪传） | `references/creative-methods/gladwell-tipping/` |
-| **黏性六原则 SUCCESs** | Simple / Unexpected / Concrete / Credible / Emotional / Stories | `references/creative-methods/heath-stickiness/` |
+| **创意生成五步法** | 吸收→咀嚼→孵化→产出→检验 + 「旧元素新组合」组合机 | `references/creative-methods/five-step-ideation/` |
+| **传播三法则** | 个别人物（谁传）+ 附着力（传什么）+ 环境威力（在哪传） | `references/creative-methods/tipping-three-laws/` |
+| **黏性六原则 SUCCESs** | Simple / Unexpected / Concrete / Credible / Emotional / Stories | `references/creative-methods/stickiness-succes/` |
 
 ### 72变 · 8 大主题速览
 
@@ -166,9 +166,9 @@ hiccai-creative/
     │       ├── a-shape/  b-spacetime/  c-perspective/  d-character/
     │       └── e-ip-relate/  f-engage/  g-narrate/  h-leverage/
     └── creative-methods/             # 三套方法论内核
-        ├── young-five-steps/         # 创意生成五步法 + 组合机
-        ├── gladwell-tipping/         # 传播三法则
-        └── heath-stickiness/         # 黏性六原则 SUCCESs
+        ├── five-step-ideation/       # 创意生成五步法 + 组合机
+        ├── tipping-three-laws/       # 传播三法则
+        └── stickiness-succes/        # 黏性六原则 SUCCESs
 ```
 
 ---
@@ -183,7 +183,8 @@ hiccai-creative/
 
 | 版本 | 日期 | 内容 |
 |---|---|---|
-| **v3.0.0** | 2026-08-10 | 结构重构：SKILL.md 从 640 行瘦身为路由层，六模式细则拆入 `modes/` 按需加载；消除交付总纲与 72变 输出格式的冲突；方法资产映射四处重复合并为一张总表；清理全部悬空引用；测试集覆盖六模式 |
+| **v3.1.0** | 2026-08-10 | 方法资产全部改用中性功能名（含目录重命名），移除书名、作者与年份出处——方法本身已完整写在文件里，出处对执行无作用，反而易诱导模型用记忆替换文件内容 |
+| v3.0.0 | 2026-08-10 | 结构重构：SKILL.md 从 640 行瘦身为路由层，六模式细则拆入 `modes/` 按需加载；消除交付总纲与 72变 输出格式的冲突；方法资产映射四处重复合并为一张总表；清理全部悬空引用；测试集覆盖六模式 |
 | v2.5.0 | 2026-08-10 | 六模式全部绑定方法资产，形成「出方向→生成→传播→黏性」闭环 |
 | v2.4.1 | 2026-08-10 | 72变全套并入仓库，自包含全部方法资产 |
 | v2.4.0 | 2026-08-10 | 第一性原理修复：交付总纲、模糊请求兜底、5 模式交付物定义 |

@@ -7,8 +7,8 @@
 品牌全案提案、甲方汇报PPT文案、营销策略文件
 
 ## 方法资产
-- **Young 5 步**（`references/creative-methods/young-five-steps/`）：P1-P5 的策略诊断用「假需求→真痛点」；灵魂页的品牌金句用「组合机」焊接
-- **Heath SUCCESs**（`references/creative-methods/heath-stickiness/`）：提案全文过「6 问自检」，确保每页核心观点可被记住
+- **创意生成五步法**（`references/creative-methods/five-step-ideation/`）：P1-P5 的策略诊断用「假需求→真痛点」；灵魂页的品牌金句用「组合机」焊接
+- **黏性六原则 SUCCESs**（`references/creative-methods/stickiness-succes/`）：提案全文过「6 问自检」，确保每页核心观点可被记住
 - **72变**（`references/creative-72-transformations/`）：破局页的差异化方向可借「A 形性 / G 叙事」族找反差（内部使用）
 
 ## 第一步交付物（定义）

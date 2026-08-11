@@ -1,11 +1,11 @@
 ---
-name: hiccai-creative-method-gladwell
-description: hiccai-creative 子技能 · 流行三法则引爆点。源自 Malcolm Gladwell《The Tipping Point》(2000)。当用户要做「刷屏」「出圈」「病毒传播」「KOL 投放」「媒介投放」「事件营销」时触发。本 skill 是 hiccai-creative 「病毒故事/传播脚本」能力的底层方法论，核心动作 = 三法则（个别人物 Who / 附着力 What / 环境威力 Where）。区别于 creative-72-transformations（卡片型启发）、hiccai-creative 母 skill（全案操盘）、hiccai-creative-method-young（创意生成）。
+name: hiccai-creative-method-tipping
+description: hiccai-creative 子技能 · 流行三法则引爆点。当用户要做「刷屏」「出圈」「病毒传播」「KOL 投放」「媒介投放」「事件营销」时触发。本 skill 是 hiccai-creative 「病毒故事/传播脚本」能力的底层方法论，核心动作 = 三法则（个别人物 Who / 附着力 What / 环境威力 Where）。区别于 creative-72-transformations（卡片型启发）、hiccai-creative 母 skill（全案操盘）、hiccai-creative-method-ideation（创意生成）。
 ---
 
-# 流行三法则 · 引爆点（Malcolm Gladwell）
+# 流行三法则 · 引爆点
 
-> 「微小的转变可以对个体、组织和社区产生重大的影响。」—— Gladwell
+> 微小的转变可以对个体、组织和社区产生重大的影响。
 > 流行三法则：**谁**传 + **传什么** + **在哪传** = 引爆
 
 本 skill 用于把任何 Big Idea 转化为**可传播策略**——告诉用户「找对人、选对内容、放在对的环境」。
@@ -125,7 +125,7 @@ description: hiccai-creative 子技能 · 流行三法则引爆点。源自 Malc
 
 ## 七、现代中文营销实战对照
 
-| Gladwell 法则 | 现代中文案例 |
+| 法则 | 现代中文案例 |
 |---|---|
 | 联络员 | 罗永浩直播团队（启动时拉董明珠/王自如） |
 | 内行 | 小米首批米粉 KOC（数码测评博主） |
@@ -140,8 +140,8 @@ description: hiccai-creative 子技能 · 流行三法则引爆点。源自 Malc
 ## 八、与其他 skill 的协作
 
 - **hiccai-creative 母 skill**：本方法是其「病毒故事/传播脚本」环节的内核
-- **hiccai-creative-method-young**：Big Idea 出来后用本 skill 设计传播策略
-- **hiccai-creative-method-heath**：附着力测试 5 问与 SUCCESs 六原则交叉验证
+- **hiccai-creative-method-ideation**：Big Idea 出来后用本 skill 设计传播策略
+- **hiccai-creative-method-stickiness**：附着力测试 5 问与 SUCCESs 六原则交叉验证
 - **creative-72-transformations F 参与主题**：找人的场景（17 游戏/18 实验/19 装置）可辅助种子活动设计
 - **hiccai-xhs / hiccai-douyin**：环境威力法则 → 平台原生内容定制
 

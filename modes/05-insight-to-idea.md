@@ -7,9 +7,9 @@
 用户给出一个现象/感受/洞察，想把它变成创意内容
 
 ## 方法资产
-- **Young 5 步**（`references/creative-methods/young-five-steps/`）：Step 1 洞察标准 + Step 5 品牌转折都对齐「5 步流程」的洞察定义（命名老现象）
+- **创意生成五步法**（`references/creative-methods/five-step-ideation/`）：Step 1 洞察标准 + Step 5 品牌转折都对齐「5 步流程」的洞察定义（命名老现象）
 - **72变**（`references/creative-72-transformations/`）：Step 3 表达变形选卡（幽默化→D 性格、视觉化→A 形性、反转化→G 叙事），**强制**
-- **Gladwell 附着力**（`references/creative-methods/gladwell-tipping/`）：Step 5 社交钩子过「附着力 5 问」
+- **附着力法则**（`references/creative-methods/tipping-three-laws/`）：Step 5 社交钩子过「附着力 5 问」
 
 ## 第一步交付物（定义）
 **一句话创意 + 核心画面 + 文案标题（≤20字）+ 15秒脚本 + 品牌落点 + 社交钩子**（Step 5 的六件套）。洞察诊断、变形选择都是内部步骤，不进交付正文。

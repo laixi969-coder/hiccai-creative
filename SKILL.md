@@ -11,7 +11,7 @@ description: >-
 license: MIT
 metadata:
   author: Caiwenbin
-  version: 3.0.0
+  version: 3.1.0
   created: 2026-07-01
   last_reviewed: 2026-08-10
   review_interval_days: 90
@@ -184,9 +184,9 @@ metadata:
 | 资产 | 位置 | 核心能力 | 该产出什么 | 用在哪些模式 |
 |---|---|---|---|---|
 | **72变卡牌**（72 张·8 族） | `references/creative-72-transformations/` | 「变 X」方向生产器，8 大族（形性/时空/视角/性格/IP/参与/叙事/杠杆） | 2-3 个**不同族**的方向，每方向标注卡号 | 四·五**强制**；一（破局差异化）、二（IP定调）、三（标题切入）、六（方向选族） |
-| **创意生成五步法** | `references/creative-methods/young-five-steps/` | 吸收→咀嚼→孵化→产出→检验 +「旧元素新组合」组合机 | 1 个核心创意 + 变体 + 组合机焊接结果 | 一（策略诊断+金句）、四（组合机焊接）、五（洞察标准）、六（Big Idea 生成） |
-| **传播三法则** | `references/creative-methods/gladwell-tipping/` | 个别人物（谁传）+ 附着力（传什么）+ 环境威力（在哪传） | 种子配比 + 附着力钩子 + 接触地图 | 二（附着力+种子配比）、四（钩子5问）、五（社交钩子）、六（传播机制） |
-| **黏性六原则 SUCCESs** | `references/creative-methods/heath-stickiness/` | Simple/Unexpected/Concrete/Credible/Emotional/Stories | 6 问自检通过的黏性文案 | 一（提案6问）、二（标题缺口）、三（知识缺口）、六（文案6问） |
+| **创意生成五步法** | `references/creative-methods/five-step-ideation/` | 吸收→咀嚼→孵化→产出→检验 +「旧元素新组合」组合机 | 1 个核心创意 + 变体 + 组合机焊接结果 | 一（策略诊断+金句）、四（组合机焊接）、五（洞察标准）、六（Big Idea 生成） |
+| **传播三法则** | `references/creative-methods/tipping-three-laws/` | 个别人物（谁传）+ 附着力（传什么）+ 环境威力（在哪传） | 种子配比 + 附着力钩子 + 接触地图 | 二（附着力+种子配比）、四（钩子5问）、五（社交钩子）、六（传播机制） |
+| **黏性六原则 SUCCESs** | `references/creative-methods/stickiness-succes/` | Simple/Unexpected/Concrete/Credible/Emotional/Stories | 6 问自检通过的黏性文案 | 一（提案6问）、二（标题缺口）、三（知识缺口）、六（文案6问） |
 
 各模式在哪一步调哪个资产、产出什么，写在对应的 `modes/` 文件头部「方法资产」段。
 
@@ -214,5 +214,7 @@ metadata:
 ---
 
 ## 版本
+
+`v3.1.0` — 2026-08-10 方法资产改用中性功能名（目录同步重命名为 `five-step-ideation` / `tipping-three-laws` / `stickiness-succes`），移除书名与作者年份出处。
 
 `v3.0.0` — 2026-08-10 结构重构：SKILL.md 从 640 行瘦身为路由层（六模式细则拆入 `modes/`，按需加载），交付总纲新增「凌驾于被加载文件输出格式之上」条款以消除与 72变 输出格式的冲突，方法资产映射由四处重复合并为一张总表，清理全部悬空引用。

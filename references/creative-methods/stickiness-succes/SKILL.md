@@ -1,11 +1,11 @@
 ---
-name: hiccai-creative-method-heath
-description: hiccai-creative 子技能 · SUCCESs 让创意更有黏性。源自 Chip & Dan Heath《Made to Stick》(2007)。当用户要做「品牌提案」「长文案」「演讲」「品牌记忆点」「传播策略」「让人记住一件事」时触发。本 skill 是 hiccai-creative 「首席提案官」能力的底层方法论，核心动作 = SUCCESs 六原则（Simple 简约 / Unexpected 意外 / Concrete 具体 / Credible 可信 / Emotional 情感 / Stories 故事）。区别于 creative-72-transformations（卡片型启发）、hiccai-creative 母 skill（全案操盘）、hiccai-creative-method-young（创意生成）、hiccai-creative-method-gladwell（传播引爆）。
+name: hiccai-creative-method-stickiness
+description: hiccai-creative 子技能 · SUCCESs 让创意更有黏性。当用户要做「品牌提案」「长文案」「演讲」「品牌记忆点」「传播策略」「让人记住一件事」时触发。本 skill 是 hiccai-creative 「首席提案官」能力的底层方法论，核心动作 = SUCCESs 六原则（Simple 简约 / Unexpected 意外 / Concrete 具体 / Credible 可信 / Emotional 情感 / Stories 故事）。区别于 creative-72-transformations（卡片型启发）、hiccai-creative 母 skill（全案操盘）、hiccai-creative-method-ideation（创意生成）、hiccai-creative-method-tipping（传播引爆）。
 ---
 
-# 让创意更有黏性 · SUCCESs 六原则（Chip & Dan Heath）
+# 让创意更有黏性 · SUCCESs 六原则
 
-> 「为什么有些创意幸存，有些死去？」—— Heath Brothers
+> 为什么有些创意幸存，有些死去？
 > SUCCESs = Simple / Unexpected / Concrete / Credible / Emotional / Stories
 
 本 skill 用于把任何创意/提案/信息转化为**让人记住 + 愿意行动**的版本。
@@ -155,7 +155,7 @@ description: hiccai-creative 子技能 · SUCCESs 让创意更有黏性。源自
 
 ### 「故事 = 模拟飞行」原理
 - 故事让人**预先体验**某个决策带来的结果
-- 比抽象论据更动人 22 倍（Heath 引用研究）
+- 比抽象论据更动人 22 倍（研究数据）
 - 故事让信息**可迁移**：听众能「套」自己的情况
 
 ### 反模式
@@ -204,8 +204,8 @@ description: hiccai-creative 子技能 · SUCCESs 让创意更有黏性。源自
 ## 十、与其他 skill 的协作
 
 - **hiccai-creative 母 skill**：本方法是其「首席提案官」/「小红书爆款标题」环节的内核
-- **hiccai-creative-method-young**：Big Idea 出来后用本 skill 增加黏性
-- **hiccai-creative-method-gladwell**：附着力×传播力 = 黏性×引爆 = 完整传播策略
+- **hiccai-creative-method-ideation**：Big Idea 出来后用本 skill 增加黏性
+- **hiccai-creative-method-tipping**：附着力×传播力 = 黏性×引爆 = 完整传播策略
 - **hiccai-wenan**：SUCCESs 自检后再交给文案 skill 精修
 - **hiccai-xhs**：小红书标题可强用「Unexpected 缺口 + Simple 一句」组合
 

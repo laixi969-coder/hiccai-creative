@@ -8,8 +8,8 @@
 
 ## 方法资产
 - **72变**（`references/creative-72-transformations/`）：方向生产器，**强制**——第一步必须先加载，按 brief 选 3 个不同族
-- **Young 组合机**（`references/creative-methods/young-five-steps/`）：每个方向的「故事感表达」用「旧元素新组合」焊接（拆元素库→跨域焊接→3 问检验）
-- **Gladwell 附着力**（`references/creative-methods/gladwell-tipping/`）：每个方向的裂变钩子过「附着力 5 问」
+- **组合机**（`references/creative-methods/five-step-ideation/`）：每个方向的「故事感表达」用「旧元素新组合」焊接（拆元素库→跨域焊接→3 问检验）
+- **附着力法则**（`references/creative-methods/tipping-three-laws/`）：每个方向的裂变钩子过「附着力 5 问」
 
 ## Big Idea 评估标准（来自创意总监视角）
 

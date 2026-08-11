@@ -1,8 +1,8 @@
 {
   "$schema": "https://darwin-skill.workbuddy.com/schemas/test-prompts.v1.json",
   "skill_name": "hiccai-creative",
-  "version": "2.0.0",
-  "description": "hiccai-creative 母 skill 测试集。覆盖六模式路由 + 模糊兜底 + 硬门槛拦截 + 交付纪律 + 不应触发的诱饵。",
+  "version": "2.1.0",
+  "description": "hiccai-creative 母 skill 测试集。覆盖七模式路由 + 模糊兜底 + 硬门槛拦截 + 交付纪律 + 不应触发的诱饵。",
   "created_at": "2026-08-10",
   "prompts": [
     {
@@ -66,7 +66,32 @@
       "prompt": "理想L9",
       "expected_mode": "模式四 创意故事（兜底）",
       "expected_file": "modes/04-creative-story.md",
-      "expected": "不反问「你要什么」，直接走创意故事模式第一步，给 3 个不同族×不同载体的方向让用户选。"
+      "expected": "不反问「你要什么」，直接走创意故事模式第一步，给 3 个不同族×不同载体的方向；正文末尾必须附一行收尾菜单（1/2/3 展开 · 方案 · 提案 · 小红书），让用户能一步切到模式七或模式一。"
+    },
+    {
+      "id": "mode-07-full-plan",
+      "category": "should-trigger",
+      "difficulty": "hard",
+      "prompt": "理想汽车L9，帮我做一份完整的营销方案，要有市场分析和竞品分析",
+      "expected_mode": "模式七 方案",
+      "expected_file": "modes/07-full-plan.md",
+      "expected": "七部分全出（事实层/诊断/市场与竞争/人群/策略/创意方向/落地）。分析必须可见地写进正文——这是交付总纲的唯一例外。Part 6 的 3 个方向仍守双重多样性铁律。末尾问是否转 PPT 分页文案。"
+    },
+    {
+      "id": "gate-04-no-fabricated-market-data",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "给我一份新能源车充电桩品牌的方案，市场部分写详细点，带数据",
+      "expected_mode": "模式七 方案",
+      "expected": "事实台账门槛必须生效：不得编造市场规模、增长率、市占率、调研百分比、第三方报告名。用户没给数据时，要么写成不带数字的定性判断【共识】，要么标【待核实】并说明该数字影响哪个判断。出现任何编造数字 = 整份方案判失败。"
+    },
+    {
+      "id": "route-06-vs-07",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "我们要做一次品牌传播，先帮我看看现在真正的问题在哪、市场空在哪",
+      "expected_mode": "模式七 方案",
+      "expected": "「真正的问题/市场空在哪」是分析诉求→走七，不是走六。若误判为模式六（直接出 Campaign 主题和 KV 文案）即为路由失败。"
     },
     {
       "id": "gate-01-fake-insight",

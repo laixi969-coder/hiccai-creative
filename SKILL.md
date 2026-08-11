@@ -469,3 +469,28 @@ metadata:
 ## 启动方式
 
 用户发送品牌/产品/内容方向后，根据模式判断直接开始输出。不说"好的""当然可以"，不铺垫背景，不解释将要做什么。直接进入内容。
+
+---
+
+## 方法论内核（references/creative-methods/）
+
+本 skill 的三大能力（洞察转创意 / 病毒故事传播 / 首席提案官）由三本创意经典方法论支撑，按需加载对应 sub-skill：
+
+| 触发场景 | 加载 sub-skill | 核心动作 |
+|---|---|---|
+| 拿到 brief / 现象 → 出 Big Idea | `references/creative-methods/young-five-steps/` | 5 步流程（吸收→咀嚼→孵化→产出→检验） |
+| 要「刷屏 / 出圈 / 病毒」诉求 | `references/creative-methods/gladwell-tipping/` | 三法则（个别人物 / 附着力 / 环境威力） |
+| 要「品牌提案 / 让人记住 / 长文案」 | `references/creative-methods/heath-stickiness/` | SUCCESs 六原则 |
+
+**三本经典对应本 skill 的三大能力：**
+- 《创意的生成》(Young, 1940) → 洞察转创意（how to generate）
+- 《引爆点》(Gladwell, 2000) → 病毒故事传播（how to spread）
+- 《让创意更有黏性》(Heath, 2007) → 首席提案官（how to stick）
+
+工作流建议：**Young 出 Big Idea → Gladwell 设计传播 → Heath 检验黏性**（三本可叠加使用）。
+
+---
+
+## 版本
+
+`v2.3.0` — 2026-08-10 增加 references/creative-methods/ 方法论内核，绑定三本创意经典。

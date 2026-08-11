@@ -9,11 +9,14 @@ description: >-
   触发词：hiccai-creative、品牌提案、创意方案、小红书方案、爆款标题、创意故事、洞察、传播脚本、
   新媒体全案、内容策略、裂变创意、广告全案、策略定位、Big Idea、AI图像prompt、
   brand pitch、creative strategy。
-  创意方向生产依赖 references/creative-72-transformations/（选族选卡），创意方法论依赖 references/creative-methods/。
+  方法资产：创意方向生产依赖 references/creative-72-transformations/（72张卡·8族），
+  创意生成依赖 references/creative-methods/young-five-steps/（5步流程+组合机），
+  传播引爆依赖 references/creative-methods/gladwell-tipping/（三法则），
+  黏性检验依赖 references/creative-methods/heath-stickiness/（SUCCESs六原则）。
 license: MIT
 metadata:
   author: Caiwenbin
-  version: 2.4.1
+  version: 2.5.0
   created: 2026-07-01
   last_reviewed: 2026-08-10
   review_interval_days: 90
@@ -44,6 +47,27 @@ metadata:
 3. **分析工具按需调用、用完即收**：门槛检验、五维评估、SUCCESs、三法则、72变 都在头脑里跑完，**只把通过检验的成品输出**。禁止把「我做了什么检验」展示给用户。
 
 **工具作用域**：门槛一（洞察标准）作用于标题/文案/洞察句；门槛二（文案质感）作用于文案；门槛三（小红书质感）作用于小红书内容；创意故事模式的方向产出用 72变 选族选卡。不适用于该产出物类型的检验，跳过即可，不得硬套成分析。
+
+---
+
+## 0.5 方法资产总表（四大资产，按模式调用，先用后收）
+
+> 本 skill 的全部方法资产都内置在仓库 `references/` 下，clone 即得。**每个模式头部标注了「方法资产」行——写明了该模式在哪一步、调哪个资产、产出什么。** 资产只做内部支撑，不展示给用户。
+
+| 资产 | 位置 | 核心能力 | 何时用 | 产出 |
+|---|---|---|---|---|
+| **《创意72变》卡牌** | `references/creative-72-transformations/`（母索引 + 8 族 themes/） | 72 个「变 X」方向，8 大主题（形性/时空/视角/性格/IP/参与/叙事/杠杆） | 要「创意方向/洗牌/换角度」时 | 2-3 个不同族的方向（每方向标注卡号） |
+| **《创意的生成》5 步流程** | `references/creative-methods/young-five-steps/` | 吸收→咀嚼→孵化→产出→检验 + 「旧元素新组合」组合机 | 要「Big Idea / 把洞察做成创意」时 | 1 个核心创意 + 变体 + 组合机焊接结果 |
+| **《引爆点》三法则** | `references/creative-methods/gladwell-tipping/` | 个别人物（谁传）+ 附着力（传什么）+ 环境威力（在哪传） | 要「刷屏/出圈/病毒/传播策略」时 | 种子配比 + 附着力钩子 + 接触地图 |
+| **《让创意更有黏性》SUCCESs** | `references/creative-methods/heath-stickiness/` | Simple/Unexpected/Concrete/Credible/Emotional/Stories | 要「提案/长文案/让人记住」时 | 6 问自检通过的黏性文案 |
+
+**四资产串联主链路**（广告全案模式完整走）：
+```
+72变 出方向（2-3 个不同族）
+  → Young 生成 Big Idea（5 步流程 + 组合机焊接）
+  → Gladwell 设计传播（种子 + 附着力钩子 + 接触地图）
+  → Heath 检验黏性（SUCCESs 6 问自检）
+```
 
 ---
 
@@ -178,6 +202,11 @@ metadata:
 ### 适用场景
 品牌全案提案、甲方汇报PPT文案、营销策略文件
 
+### 方法资产
+- **Young 5 步**（`references/creative-methods/young-five-steps/`）：P1-P5 的策略诊断用「假需求→真痛点」；灵魂页的品牌金句用「组合机」焊接
+- **Heath SUCCESs**（`references/creative-methods/heath-stickiness/`）：提案全文过「6 问自检」，确保每页核心观点可被记住
+- **72变**（`references/creative-72-transformations/`）：破局页的差异化方向可借「A 形性 / G 叙事」族找反差（内部使用）
+
 ### 第一步交付物（定义）
 **≥50 页的完整提案文案**（分页 `P[页码]` 格式，单页≤50 字）。交付正文只含 PPT 上的核心文案，不含策略分析过程、不含方法论表格。
 
@@ -210,6 +239,11 @@ metadata:
 
 ### 适用场景
 需要完整小红书内容增长方案
+
+### 方法资产
+- **72变**（`references/creative-72-transformations/`）：IP 定调可用「D 性格（变可爱/变魔性）/ E IP（变同类/变IP）」族；内容方向用「H 杠杆（变节日/应时而变）」族
+- **Gladwell 附着力**（`references/creative-methods/gladwell-tipping/`）：爆款钩子过「附着力 5 问」，KOL 配比用「个别人物法则」（联络员/内行/推销员）
+- **Heath SUCCESs**（`references/creative-methods/heath-stickiness/`）：标题/笔记过 SUCCESs，制造知识缺口（Unexpected）
 
 ### 第一步交付物（定义）
 **完整小红书增长方案**（趋势洞察→IP定调→核心玩法→三阶段节奏），含每阶段的爆款笔记 Demo。交付正文是方案本身，不含分析方法讲解。
@@ -261,6 +295,10 @@ metadata:
 ### 适用场景
 需要批量生产小红书/抖音爆款标题
 
+### 方法资产
+- **Heath Unexpected**（`references/creative-methods/heath-stickiness/`）：每个标题必须制造「知识缺口」，标题公式与「缺口制造」三连（开场反常识/中段留缺口/收尾闭合）对齐
+- **72变**（`references/creative-72-transformations/`）：标题方向可借「G 叙事（变夸张/变误会/变反转）/ D 性格（变魔性）」族找切入点（内部使用）
+
 ### 第一步交付物（定义）
 **30 条标题**（6 类 × 5 条），每条附爆款分（1-10）+ 一句得分理由，≥8 分自动附首图建议。交付正文即标题清单，不含评分标准讲解。
 
@@ -308,6 +346,11 @@ metadata:
 
 ### 适用场景
 需要有裂变基因的品牌故事方向 / 传播创意 / 广告脚本种子
+
+### 方法资产
+- **72变**（`references/creative-72-transformations/`）：方向生产器，**强制**——第一步必须先加载，按 brief 选 3 个不同族
+- **Young 组合机**（`references/creative-methods/young-five-steps/`）：每个方向的「故事感表达」用「旧元素新组合」焊接（拆元素库→跨域焊接→3 问检验）
+- **Gladwell 附着力**（`references/creative-methods/gladwell-tipping/`）：每个方向的裂变钩子过「附着力 5 问」
 
 ### Big Idea 评估标准（来自创意总监视角）
 
@@ -379,6 +422,11 @@ metadata:
 ### 适用场景
 用户给出一个现象/感受/洞察，想把它变成创意内容
 
+### 方法资产
+- **Young 5 步**（`references/creative-methods/young-five-steps/`）：Step 1 洞察标准 + Step 5 品牌转折都对齐「5 步流程」的洞察定义（命名老现象）
+- **72变**（`references/creative-72-transformations/`）：Step 3 表达变形选卡（幽默化→D 性格、视觉化→A 形性、反转化→G 叙事），**强制**
+- **Gladwell 附着力**（`references/creative-methods/gladwell-tipping/`）：Step 5 社交钩子过「附着力 5 问」
+
 ### 第一步交付物（定义）
 **一句话创意 + 核心画面 + 文案标题（≤20字）+ 15秒脚本 + 品牌落点 + 社交钩子**（Step 5 的六件套）。洞察诊断、变形选择都是内部步骤，不进交付正文。
 
@@ -428,6 +476,12 @@ metadata:
 ### 适用场景
 需要从品牌策略到创意到文案到视觉Prompt的完整广告全案
 
+### 方法资产（四资产全链路）
+- **72变**（`references/creative-72-transformations/`）：Step 2 创意方向选族选卡，2-3 个不同族
+- **Young 5 步 + 组合机**（`references/creative-methods/young-five-steps/`）：Step 1 策略诊断 + Step 2 Big Idea 生成
+- **Gladwell 三法则**（`references/creative-methods/gladwell-tipping/`）：Step 2 传播机制 + Step 3 社媒文案的附着力
+- **Heath SUCCESs**（`references/creative-methods/heath-stickiness/`）：Step 3 文案/宣言过「6 问自检」
+
 ### 第一步交付物（定义）
 **四步走全案**（策略层→创意方向→文案层→AI生图Prompt），每步确认后再往下。交付正文是每一步的成品（策略主张/方向/文案/Prompt），策略诊断是内部步骤。
 
@@ -446,8 +500,8 @@ metadata:
 
 **Step 2 — 创意方向（Creative Director视角）**
 
-基于策略主张，给出2-3个创意方向，每个方向包含：
-- 方向名称
+基于策略主张，用 72变 选 2-3 个不同族方向，每个方向包含：
+- 方向名称（标注卡：X族·编号）
 - 核心创意（一句话）
 - 创意机制（怎么运转）
 - 关键表达（一句可记忆的话）
@@ -466,6 +520,8 @@ metadata:
 - 品牌宣言（一句可长期使用的品牌语）
 
 每组文案标注：击中的心理动因 + 转译的产品利益 + 适合的渠道场景
+
+全部文案过「Heath SUCCESs 6 问自检」+「门槛二」。
 
 **Step 4 — AI图像Prompt套组（Designer视角）**
 
@@ -514,27 +570,52 @@ metadata:
 
 ---
 
-## 方法论内核（references/creative-methods/）
+## 方法资产地图（references/ 完整清单）
 
-本 skill 的三大能力（洞察转创意 / 病毒故事传播 / 首席提案官）由三本创意经典方法论支撑，按需加载对应 sub-skill：
+本 skill 的全部方法资产都内置在本仓库 `references/` 下，clone 即得：
 
-| 触发场景 | 加载 sub-skill | 核心动作 |
-|---|---|---|
-| **要「创意方向 / 洗牌 / 换角度」** | `references/creative-72-transformations/SKILL.md`（含 themes/ 8 族） | 72 变选族选卡，产出 2-3 个不同族方向 |
-| 拿到 brief / 现象 → 出 Big Idea | `references/creative-methods/young-five-steps/` | 5 步流程（吸收→咀嚼→孵化→产出→检验） |
-| 要「刷屏 / 出圈 / 病毒」诉求 | `references/creative-methods/gladwell-tipping/` | 三法则（个别人物 / 附着力 / 环境威力） |
-| 要「品牌提案 / 让人记住 / 长文案」 | `references/creative-methods/heath-stickiness/` | SUCCESs 六原则 |
+```
+hiccai-creative/
+├── SKILL.md                        # 本文件：六模式 + 交付总纲 + 方法资产总表
+├── test-prompts.json               # 母 skill 测试集
+└── references/
+    ├── creative-72-transformations/  # ★《创意72变》72张卡·8族（how to ideate）
+    │   ├── SKILL.md                 # 母索引：选族 + 路由 + 多样性强制
+    │   ├── cards.md                 # 72 张卡完整清单
+    │   ├── GLOSSARY.md              # 共享术语词典
+    │   ├── INDEX.md                 # 引用图
+    │   ├── DIGEST.md                # 精华长文
+    │   ├── test-prompts.json / test-results.md
+    │   └── themes/                  # 8 大主题 sub-skill
+    │       ├── a-shape/  (形性重构 01-04,27-28)
+    │       ├── b-spacetime/ (时空错位 10-11,21,58)
+    │       ├── c-perspective/ (视角重置 22,25,54,56,66)
+    │       ├── d-character/ (性格置换 05-09,57)
+    │       ├── e-ip-relate/ (IP 与关系 13-17,36,42,64)
+    │       ├── f-engage/ (参与互动 17-20,29,31,44-45)
+    │       ├── g-narrate/ (叙事语义 23-24,32-35,49-52,59,67-68)
+    │       └── h-leverage/ (前瞻杠杆 30,37-41,43,46-48,50,53,60-63,65,69-72)
+    └── creative-methods/            # 三本创意经典方法论
+        ├── young-five-steps/        # 《创意的生成》5步流程+组合机（how to generate）
+        ├── gladwell-tipping/        # 《引爆点》三法则（how to spread）
+        └── heath-stickiness/        # 《让创意更有黏性》SUCCESs（how to stick）
+```
 
-**方法资产（全部内置于本仓库 references/ 下，clone 即得）：**
-- 《创意72变》卡牌 72 张（8 族）→ 创意方向生产器（how to ideate）
-- 《创意的生成》(Young, 1940) → 洞察转创意（how to generate）
-- 《引爆点》(Gladwell, 2000) → 病毒故事传播（how to spread）
-- 《让创意更有黏性》(Heath, 2007) → 首席提案官（how to stick）
+**模式 → 方法资产速查：**
 
-工作流建议：**72变 出方向 → Young 生成 Big Idea → Gladwell 设计传播 → Heath 检验黏性**（可叠加使用）。
+| 模式 | 72变 | Young | Gladwell | Heath |
+|---|---|---|---|---|
+| 一 提案 | 破局差异化 | 策略诊断+金句 | — | 提案黏性 6 问 |
+| 二 小红书全案 | IP 定调+内容方向 | — | 附着力+种子配比 | 标题缺口 |
+| 三 标题工厂 | 标题切入点 | — | — | 知识缺口 |
+| 四 创意故事 | **选族选卡（强制）** | 组合机焊接 | 钩子附着力 5 问 | — |
+| 五 洞察转创意 | **表达变形选卡（强制）** | 洞察标准 | 社交钩子 | — |
+| 六 广告全案 | 方向选族 | Big Idea 生成 | 传播机制 | 文案 6 问 |
+
+**工作流建议**：**72变 出方向 → Young 生成 Big Idea → Gladwell 设计传播 → Heath 检验黏性**（四资产可叠加使用）。
 
 ---
 
 ## 版本
 
-`v2.4.1` — 2026-08-10 将《创意72变》全套（16 文件，含 8 族 themes/）并入本仓库 references/creative-72-transformations/，hiccai-creative 自包含全部方法资产。
+`v2.5.0` — 2026-08-10 全量重构：新增「方法资产总表」+「方法资产地图」，将《创意72变》72张卡与三本创意经典（Young/Gladwell/Heath）编织进全部六模式（每个模式头部标注方法资产使用点），形成「出方向→生成→传播→黏性」完整闭环。

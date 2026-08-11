@@ -12,9 +12,9 @@ description: >-
 license: MIT
 metadata:
   author: Caiwenbin
-  version: 2.2.0
+  version: 2.3.0
   created: 2026-07-01
-  last_reviewed: 2026-07-06
+  last_reviewed: 2026-08-10
   review_interval_days: 90
 ---
 

@@ -175,7 +175,7 @@ description: hiccai-creative 子技能 · 创意生成五步流程。源自 Jame
 
 - **hiccai-creative 母 skill**：本方法是其「洞察转创意」环节的内核
 - **creative-72-transformations**：在步骤 4 后用 72 变给核心创意做 7 方向扩展
-- **master-copywriter**：步骤 4 的创意定下来后，交给文案大师写正文
+- **hiccai-wenan**：步骤 4 的创意定下来后，交给文案 skill 写正文
 - **hiccai-creative-method-gladwell**：步骤 5 检验时可用「传播力测试」补充
 - **hiccai-creative-method-heath**：步骤 5 检验时可用「SUCCESs 自检」补充
 

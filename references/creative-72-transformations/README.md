@@ -17,11 +17,10 @@
 ### 场景 3：用户在做方案，要选媒介或文案
 
 「选族」部分会推荐移交：
-- **文案主笔** → `master-copywriter`（Neil / 许舜英 / 李欣频）
-- **KV 封面** → `wenrouhu-design` 或 `hiccai-title-pic`
+- **文案主笔** → `hiccai-wenan` 或 `hiccai-master-copywriter`
+- **KV 封面** → `hiccai-title-pic`
 - **短视频脚本** → `hiccai-douyin`
 - **小红书内容** → `hiccai-xhs`
-- **媒介投放** → `recommend-connectors`
 
 ## 8 大主题一览
 

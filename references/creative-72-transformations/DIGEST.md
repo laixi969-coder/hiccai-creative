@@ -122,8 +122,8 @@
 
 | 当创意方向确立后 | 交给 |
 |---|---|
-| 文案主笔 | `master-copywriter`（Neil / 许舜英 / 李欣频） |
-| KV / 海报 | `wenrouhu-design` / `hiccai-title-pic` |
+| 文案主笔 | `hiccai-wenan` / `hiccai-master-copywriter` |
+| KV / 海报 | `hiccai-title-pic` |
 | 短视频脚本 | `hiccai-douyin` |
 | 小红书内容 | `hiccai-xhs` |
 | 故事/剧本 | `hiccai-story` |

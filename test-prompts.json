@@ -1,5 +1,118 @@
-[
-  {"id": 1, "prompt": "帮我写30条小红书爆款标题，主题是成都新开的一家社区咖啡馆，主打宠物友好", "expected": "标题工厂模式：6类×5条，每条带爆款分和理由，≥8分附首图建议"},
-  {"id": 2, "prompt": "我们是一个高端矿泉水品牌，想做一波年轻化传播，帮我出创意", "expected": "创意故事模式：先点破'年轻化'是空词需定义，输出3个差异明显的创意故事方向+裂变钩子"},
-  {"id": 3, "prompt": "帮我做一个新中式茶饮品牌的完整提案", "expected": "提案模式：信息不足时先补关键信息或标注假设，按暗线结构输出分页提案文案，单页≤50字"}
-]
+{
+  "$schema": "https://darwin-skill.workbuddy.com/schemas/test-prompts.v1.json",
+  "skill_name": "hiccai-creative",
+  "version": "2.0.0",
+  "description": "hiccai-creative 母 skill 测试集。覆盖六模式路由 + 模糊兜底 + 硬门槛拦截 + 交付纪律 + 不应触发的诱饵。",
+  "created_at": "2026-08-10",
+  "prompts": [
+    {
+      "id": "mode-01-proposal",
+      "category": "should-trigger",
+      "difficulty": "medium",
+      "prompt": "帮我做一个新中式茶饮品牌的完整提案",
+      "expected_mode": "模式一 提案",
+      "expected_file": "modes/01-proposal.md",
+      "expected": "先读 modes/01-proposal.md。信息不足时最多追问一次或开头一行标注假设；超 20 页先给 10 行章节骨架确认；确认后输出 ≥50 页分页文案，单页≤50 字，不含策略分析章节。"
+    },
+    {
+      "id": "mode-02-xhs-fullplan",
+      "category": "should-trigger",
+      "difficulty": "medium",
+      "prompt": "我们是一个做手工酸奶的本地品牌，想要一套完整的小红书运营方案",
+      "expected_mode": "模式二 小红书全案",
+      "expected_file": "modes/02-xhs-fullplan.md",
+      "expected": "趋势洞察→IP定调→核心玩法→三阶段节奏，每阶段带完整笔记 Demo（封面/正文标题/Hook/互动），全部内容过门槛三。"
+    },
+    {
+      "id": "mode-03-title-factory",
+      "category": "should-trigger",
+      "difficulty": "easy",
+      "prompt": "帮我写30条小红书爆款标题，主题是成都新开的一家社区咖啡馆，主打宠物友好",
+      "expected_mode": "模式三 标题工厂",
+      "expected_file": "modes/03-title-factory.md",
+      "expected": "6 类×5 条=30 条，每条附爆款分（1-10）+ 一句得分理由，≥8 分附首图建议；不输出评分标准讲解。"
+    },
+    {
+      "id": "mode-04-creative-story",
+      "category": "should-trigger",
+      "difficulty": "medium",
+      "prompt": "我们是一个高端矿泉水品牌，想做一波年轻化传播，帮我出创意",
+      "expected_mode": "模式四 创意故事",
+      "expected_file": "modes/04-creative-story.md",
+      "expected": "先点破「年轻化」是空词需定义；只交 3 个创意方向（不交脚本/标题）；3 个方向来自不同族、载体互不相同且至少 2 个不是视频；不展示选族说明与质检过程。"
+    },
+    {
+      "id": "mode-05-insight-to-idea",
+      "category": "should-trigger",
+      "difficulty": "medium",
+      "prompt": "我发现一个现象：大家在超市结账排队时都在低头刷手机，但轮到自己时又慌慌张张。能不能变成创意？",
+      "expected_mode": "模式五 洞察转创意",
+      "expected_file": "modes/05-insight-to-idea.md",
+      "expected": "输出六件套（一句话创意 + 核心画面 + ≤20字标题 + 15秒脚本 + 品牌落点 + 社交钩子）；五步转化过程与选卡都在内部完成，不进交付正文。"
+    },
+    {
+      "id": "mode-06-full-campaign",
+      "category": "should-trigger",
+      "difficulty": "hard",
+      "prompt": "我们是一个国产户外装备品牌，需要从策略到创意到文案到视觉的完整广告全案",
+      "expected_mode": "模式六 广告全案",
+      "expected_file": "modes/06-full-campaign.md",
+      "expected": "四步走且每步确认后再往下：Step1 策略层（含假需求→真痛点、立足点、单一传播任务）→ Step2 创意方向（2-3 不同族 + Big Idea 五维打分）→ Step3 文案层 → Step4 生图 Prompt 四件套。"
+    },
+    {
+      "id": "fallback-brand-only",
+      "category": "boundary",
+      "difficulty": "medium",
+      "prompt": "理想L9",
+      "expected_mode": "模式四 创意故事（兜底）",
+      "expected_file": "modes/04-creative-story.md",
+      "expected": "不反问「你要什么」，直接走创意故事模式第一步，给 3 个不同族×不同载体的方向让用户选。"
+    },
+    {
+      "id": "gate-01-fake-insight",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "我的洞察是：现在的消费者越来越注重品质生活，因为他们本质上追求的是自我实现。基于这个写创意。",
+      "expected_mode": "模式五 洞察转创意",
+      "expected": "门槛一必须拦截——「消费者」是报告腔、「因为/本质上」是解释词、且不可拍。内部重写成一句可拍的现象洞察再往下走，不能直接沿用用户给的伪洞察。"
+    },
+    {
+      "id": "gate-02-banned-words",
+      "category": "boundary",
+      "difficulty": "medium",
+      "prompt": "给我们的新楼盘写几句广告语，要突出高端生活和匠心打造的品质之选",
+      "expected_mode": "模式三/文案",
+      "expected": "门槛二禁用词拦截：高端生活/匠心打造/品质之选一律替换为具体场景与用户视角；豪宅题材禁促销 CTA，行动引导走「预约鉴赏」类低声句式；不编造年份、工艺年限等硬事实。"
+    },
+    {
+      "id": "discipline-01-no-analysis-dump",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "用72变给瑞幸想个创意",
+      "expected_mode": "模式四 创意故事",
+      "expected": "即使用户点名 72变，交付正文也只出现 3 个创意方向。选族说明、选卡说明、质检四关打勾属内部草稿，不得输出——验证「交付总纲凌驾于被加载文件输出格式之上」这条是否生效。"
+    },
+    {
+      "id": "discipline-02-no-over-delivery",
+      "category": "boundary",
+      "difficulty": "medium",
+      "prompt": "给我们的宠物粮品牌来几个创意方向",
+      "expected_mode": "模式四 创意故事",
+      "expected": "第一步只交 3 个方向。不得越级附送分镜脚本、标题清单或社媒文案——那是用户选完方向后的第二步。"
+    },
+    {
+      "id": "should-NOT-trigger-01",
+      "category": "should-NOT-trigger",
+      "difficulty": "medium",
+      "prompt": "帮我把这段 Python 报错修一下",
+      "expected": "与创意/新媒体无关，不应触发本 skill。"
+    },
+    {
+      "id": "should-NOT-trigger-02",
+      "category": "should-NOT-trigger",
+      "difficulty": "hard",
+      "prompt": "帮我拆解一下这个小红书博主的账号数据和内容公式",
+      "expected": "属账号分析/竞品拆解，应走 xhs-blogger-analyzer；本 skill 做的是内容生产，不是账号数据拆解。"
+    }
+  ]
+}

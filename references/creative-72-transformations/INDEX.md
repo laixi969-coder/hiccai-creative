@@ -51,13 +51,12 @@ graph TD
 
 | 当创意方向确立后要做... | 移交到 |
 |---|---|
-| 文案主笔（品牌宣言/活动文案/海报文案） | `master-copywriter` |
-| KV / 封面 / 海报 | `wenrouhu-design` 或 `hiccai-title-pic` |
+| 文案主笔（品牌宣言/活动文案/海报文案） | `hiccai-wenan` / `hiccai-master-copywriter` |
+| KV / 封面 / 海报 | `hiccai-title-pic` |
 | 短视频脚本 | `hiccai-douyin` |
 | 小红书内容 | `hiccai-xhs` |
-| 媒介投放 | `recommend-connectors` |
 | 故事/剧本 | `hiccai-story` |
-| 话题事件传播 | `hiccai-Hook` 或 `hiccai-social` |
+| 话题事件传播 | `hiccai-hook` 或 `hiccai-social` |
 | 创意策略/品牌定位 | `dichanfangan` 或 `hiccai-creative` |
 | 地产/高端品牌/奢侈品 | `hiccai-wenan` |
 

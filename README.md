@@ -1,6 +1,6 @@
 # hiccai-creative — 创意与新媒体全案操盘手
 
-> 一个把「72 张创意卡 × 三本创意经典 × 六种交付模式」炼成一体的 AI Skill。
+> 一个把「72 张创意卡 × 四套方法资产 × 六种交付模式」炼成一体的 AI Skill。
 > 输入品牌/产品/现象 → 输出可直接使用的创意成品（方向、文案、标题、脚本、提案、装置方案）。
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-blue)](https://github.com/alchaincyf/agent-skills-standard)
@@ -19,7 +19,7 @@
 - **洞察转创意引擎** — 把现象洞察转化为可拍的创意表达
 - **广告全案协作者** — 策略定位→创意方向→文案→AI图像Prompt 一体化
 
-**它的独特之处**：不只是一个 prompt 模板，而是把 **4 套方法资产**（72 张创意卡牌 + 3 本创意经典）内置进工作流，让每个模式都有方法论背书，产出有质量下限。
+**它的独特之处**：不只是一个 prompt 模板，而是把 **4 套方法资产**（72 张创意卡牌 + 三套方法论内核）内置进工作流，让每个模式都有方法背书，产出有质量下限。
 
 ---
 
@@ -27,15 +27,16 @@
 
 ### 方式一：作为 Skill 安装（推荐）
 
-1. clone 仓库到你的 skills 目录：
+clone 仓库到你所用 runtime 的 skills 目录：
 
 ```bash
 git clone https://github.com/laixi969-coder/hiccai-creative.git \
-  ~/.workbuddy/skills/hiccai-creative
-# 或其他 runtime 的 skills 目录（.claude/skills、.cursor/skills 等）
+  ~/.claude/skills/hiccai-creative
 ```
 
-2. 对话中直接说需求，自动触发：
+其他 runtime 把目标路径换成对应目录即可（`~/.workbuddy/skills/`、`~/.cursor/skills/` 等）。
+
+对话中直接说需求，自动触发：
 
 ```
 「帮我写 30 条小红书爆款标题，主题是成都的宠物友好咖啡馆」
@@ -46,20 +47,34 @@ git clone https://github.com/laixi969-coder/hiccai-creative.git \
 
 ### 方式二：作为方法库阅读
 
-即使不安装，`references/` 下的内容也是完整的创意方法论参考书（72 张卡牌 + 三本经典拆解），可直接阅读。
+即使不安装，`references/` 下的内容也是完整的创意方法参考书（72 张卡牌 + 三套方法论拆解），可直接阅读。
+
+---
+
+## 架构：路由层 + 按需加载
+
+`SKILL.md` 只保留**路由与全局纪律**（约 200 行，常驻上下文）；六个模式的细则拆在 `modes/` 下，判断出模式后才加载对应一份。
+
+```
+用户输入 → SKILL.md 判断模式 → Read modes/0X-xxx.md → 输出成品
+              ↑ 常驻                    ↑ 按需加载
+        交付总纲 / 三条硬门槛 / 武器库
+```
+
+这样做的原因：只要 30 条标题的用户，不必为提案模式、广告全案模式的规则买单——上下文更省，模型对当前模式规则的注意力也更集中。同时把**质量下限**（交付总纲 + 三条硬门槛）留在常驻层，即使模式文件没被加载，产出也不会失控。
 
 ---
 
 ## 六大模式（自动识别，无需手动选）
 
-| 模式 | 适用 | 第一步交付物 |
-|---|---|---|
-| **提案模式** | 品牌全案、甲方汇报 PPT | ≥50 页分页提案文案（单页≤50 字） |
-| **小红书全案模式** | 完整小红书增长方案 | 趋势→IP→玩法→三阶段节奏 + 笔记 Demo |
-| **标题工厂模式** | 批量爆款标题 | 30 条标题（6 类×5 条，附评分） |
-| **创意故事模式** | 品牌故事方向 / 传播创意 | 3 个不同族 × 不同载体的创意方向 |
-| **洞察转创意模式** | 现象/洞察→创意内容 | 一句话创意 + 画面 + 标题 + 15s 脚本 + 钩子 |
-| **广告全案模式** | 策略→创意→文案→视觉全案 | 四步走全案（策略/方向/文案/Prompt） |
+| 模式 | 适用 | 细则文件 | 第一步交付物 |
+|---|---|---|---|
+| **提案模式** | 品牌全案、甲方汇报 PPT | `modes/01-proposal.md` | ≥50 页分页提案文案（单页≤50 字） |
+| **小红书全案模式** | 完整小红书增长方案 | `modes/02-xhs-fullplan.md` | 趋势→IP→玩法→三阶段节奏 + 笔记 Demo |
+| **标题工厂模式** | 批量爆款标题 | `modes/03-title-factory.md` | 30 条标题（6 类×5 条，附评分） |
+| **创意故事模式** | 品牌故事方向 / 传播创意 | `modes/04-creative-story.md` | 3 个不同族 × 不同载体的创意方向 |
+| **洞察转创意模式** | 现象/洞察→创意内容 | `modes/05-insight-to-idea.md` | 一句话创意 + 画面 + 标题 + 15s 脚本 + 钩子 |
+| **广告全案模式** | 策略→创意→文案→视觉全案 | `modes/06-full-campaign.md` | 四步走全案（策略/方向/文案/Prompt） |
 
 **模糊请求兜底**：只说品牌名没说要什么（如「理想 L9」）→ 默认创意故事模式第一步，先给 3 个方向让用户选。
 
@@ -70,17 +85,17 @@ git clone https://github.com/laixi969-coder/hiccai-creative.git \
 本 skill 把 4 套创意方法资产编织进六模式工作流，形成完整闭环：
 
 ```
-72变 出方向 → Young 生成 Big Idea → Gladwell 设计传播 → Heath 检验黏性
+72变 出方向 → 五步法 生成 Big Idea → 三法则 设计传播 → SUCCESs 检验黏性
 ```
 
-| 资产 | 来源 | 核心能力 | 位置 |
-|---|---|---|---|
-| **《创意72变》卡牌** | 实体卡牌数字化 | 72 个「变 X」方向，8 大主题，选族选卡产方向 | `references/creative-72-transformations/` |
-| **《创意的生成》5 步流程** | James Webb Young (1940) | 吸收→咀嚼→孵化→产出→检验 + 「旧元素新组合」组合机 | `references/creative-methods/young-five-steps/` |
-| **《引爆点》三法则** | Malcolm Gladwell (2000) | 个别人物 + 附着力 + 环境威力 | `references/creative-methods/gladwell-tipping/` |
-| **《让创意更有黏性》SUCCESs** | Chip & Dan Heath (2007) | Simple/Unexpected/Concrete/Credible/Emotional/Stories | `references/creative-methods/heath-stickiness/` |
+| 资产 | 核心能力 | 位置 |
+|---|---|---|
+| **72变创意卡牌** | 72 个「变 X」方向，8 大主题，选族选卡产方向 | `references/creative-72-transformations/` |
+| **创意生成五步法** | 吸收→咀嚼→孵化→产出→检验 + 「旧元素新组合」组合机 | `references/creative-methods/young-five-steps/` |
+| **传播三法则** | 个别人物（谁传）+ 附着力（传什么）+ 环境威力（在哪传） | `references/creative-methods/gladwell-tipping/` |
+| **黏性六原则 SUCCESs** | Simple / Unexpected / Concrete / Credible / Emotional / Stories | `references/creative-methods/heath-stickiness/` |
 
-### 创意72变 · 8 大主题速览
+### 72变 · 8 大主题速览
 
 | 族 | 主题 | 覆盖卡号 | 典型卡 |
 |---|---|---|---|
@@ -103,7 +118,8 @@ git clone https://github.com/laixi969-coder/hiccai-creative.git \
 
 - 交付物 = 成品（文案/标题/方向/脚本/提案/钩子）
 - 第一步只交「该模式的第一层产物」，用户确认后再展开
-- 分析工具（门槛/方法论/检验）只做内部步骤，不进交付正文
+- 分析工具（门槛/方法/检验）只做内部步骤，不进交付正文
+- **该纪律凌驾于所有被加载文件的输出格式之上**——任何子模块规定的「选族说明/质检打勾」类格式，在本 skill 内一律降级为内部草稿
 
 ### 2. 双重多样性（防路径依赖）
 
@@ -126,11 +142,20 @@ git clone https://github.com/laixi969-coder/hiccai-creative.git \
 
 ```
 hiccai-creative/
-├── SKILL.md                        # 主文件：六模式 + 交付总纲 + 方法资产总表
-├── README.md                       # 本文件
-├── test-prompts.json               # 主 skill 测试集（darwin-skill 兼容）
-└── references/
-    ├── creative-72-transformations/   # ★《创意72变》72张卡·8族
+├── SKILL.md                          # 路由层：交付总纲 + 模式路由 + 三条硬门槛 + 武器库 + 资产总表
+├── README.md                         # 本文件
+├── LICENSE                           # MIT
+├── test-prompts.json                 # 主 skill 测试集（六模式全覆盖）
+├── modes/                            # 六模式细则（按需加载，不常驻）
+│   ├── 01-proposal.md                # 提案模式
+│   ├── 02-xhs-fullplan.md            # 小红书全案模式
+│   ├── 03-title-factory.md           # 标题工厂模式
+│   ├── 04-creative-story.md          # 创意故事模式
+│   ├── 05-insight-to-idea.md         # 洞察转创意模式
+│   ├── 06-full-campaign.md           # 广告全案模式
+│   └── ai-image-prompt.md            # AI 生图 Prompt 四件套规范
+└── references/                       # 方法资产
+    ├── creative-72-transformations/  # ★ 72变创意卡牌·72张·8族
     │   ├── SKILL.md                  # 母索引：选族 + 路由 + 双重多样性
     │   ├── cards.md                  # 72 张卡完整清单
     │   ├── GLOSSARY.md               # 共享术语词典
@@ -140,10 +165,10 @@ hiccai-creative/
     │   └── themes/                   # 8 大主题 sub-skill
     │       ├── a-shape/  b-spacetime/  c-perspective/  d-character/
     │       └── e-ip-relate/  f-engage/  g-narrate/  h-leverage/
-    └── creative-methods/              # 三本创意经典方法论
-        ├── young-five-steps/          # 《创意的生成》5步流程+组合机
-        ├── gladwell-tipping/          # 《引爆点》三法则
-        └── heath-stickiness/          # 《让创意更有黏性》SUCCESs
+    └── creative-methods/             # 三套方法论内核
+        ├── young-five-steps/         # 创意生成五步法 + 组合机
+        ├── gladwell-tipping/         # 传播三法则
+        └── heath-stickiness/         # 黏性六原则 SUCCESs
 ```
 
 ---
@@ -158,19 +183,20 @@ hiccai-creative/
 
 | 版本 | 日期 | 内容 |
 |---|---|---|
-| **v2.5.0** | 2026-08-10 | 全量重构：方法资产总表 + 六模式全部绑定方法资产，形成「出方向→生成→传播→黏性」闭环 |
-| v2.4.1 | 2026-08-10 | 《创意72变》全套并入仓库，自包含全部方法资产 |
+| **v3.0.0** | 2026-08-10 | 结构重构：SKILL.md 从 640 行瘦身为路由层，六模式细则拆入 `modes/` 按需加载；消除交付总纲与 72变 输出格式的冲突；方法资产映射四处重复合并为一张总表；清理全部悬空引用；测试集覆盖六模式 |
+| v2.5.0 | 2026-08-10 | 六模式全部绑定方法资产，形成「出方向→生成→传播→黏性」闭环 |
+| v2.4.1 | 2026-08-10 | 72变全套并入仓库，自包含全部方法资产 |
 | v2.4.0 | 2026-08-10 | 第一性原理修复：交付总纲、模糊请求兜底、5 模式交付物定义 |
-| v2.3.0 | 2026-08-10 | 接入 references/creative-methods/ 三本创意经典 |
+| v2.3.0 | 2026-08-10 | 接入 `references/creative-methods/` 三套方法论内核 |
 | v2.2.0 | 2026-07-06 | 基线版本 |
 
 ---
 
 ## 相关项目
 
-- **darwin-skill** — 本 skill 的自动进化器（9 维 rubric 评估 + 盲测优化）
-- **master-copywriter** — 文案大师工坊（Neil French / 许舜英 / 李欣频）
 - **hiccai-wenan / hiccai-xhs** — 文案质感与小红书质感标准的来源
+- **hiccai-title-pic** — KV / 封面 / 海报
+- **hiccai-douyin / hiccai-story** — 短视频脚本 / 故事剧本
 
 ---
 

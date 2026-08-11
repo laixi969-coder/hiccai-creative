@@ -206,7 +206,7 @@ description: hiccai-creative 子技能 · SUCCESs 让创意更有黏性。源自
 - **hiccai-creative 母 skill**：本方法是其「首席提案官」/「小红书爆款标题」环节的内核
 - **hiccai-creative-method-young**：Big Idea 出来后用本 skill 增加黏性
 - **hiccai-creative-method-gladwell**：附着力×传播力 = 黏性×引爆 = 完整传播策略
-- **master-copywriter**：SUCCESs 自检后再交给文案大师精修
+- **hiccai-wenan**：SUCCESs 自检后再交给文案 skill 精修
 - **hiccai-xhs**：小红书标题可强用「Unexpected 缺口 + Simple 一句」组合
 
 ---

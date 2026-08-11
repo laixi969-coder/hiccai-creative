@@ -1,0 +1,285 @@
+{
+  "$schema": "https://darwin-skill.workbuddy.com/schemas/test-prompts.v1.json",
+  "skill_name": "creative-72-transformations",
+  "version": "1.1.0",
+  "description": "母索引 创意72变 的压力测试集。基于 darwin-skill 兼容格式。",
+  "created_at": "2026-08-10",
+  "prompts": [
+    {
+      "id": "should-trigger-01",
+      "category": "should-trigger",
+      "difficulty": "easy",
+      "prompt": "我们下周要推一款新饮料，需要一个创意方向，受众是 Z 世代。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "D 性格置换",
+        "H 前瞻杠杆"
+      ],
+      "rationale": "标准创意需求，含产品+受众+时间。明确归为创意起步诉求。"
+    },
+    {
+      "id": "should-trigger-02",
+      "category": "should-trigger",
+      "difficulty": "easy",
+      "prompt": "我要做一个品牌campaign，想请一些明星来代言。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "E IP 与关系"
+      ],
+      "rationale": "提到'代言'关键词，命中 E 主题。"
+    },
+    {
+      "id": "should-trigger-03",
+      "category": "should-trigger",
+      "difficulty": "medium",
+      "prompt": "我们的新品没什么戏剧性，怎么能让人记住？",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "A 形性重构",
+        "H 前瞻杠杆"
+      ],
+      "rationale": "戏剧性诉求，命中 A 形性 + H 杠杆。"
+    },
+    {
+      "id": "should-trigger-04",
+      "category": "should-trigger",
+      "difficulty": "medium",
+      "prompt": "我有个 brief 但是总觉得创意不够大胆，能不能给我换个思路？",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "A 形性重构",
+        "D 性格置换"
+      ],
+      "rationale": "要换思路+不够大胆，命中 D 性格 + A 形性。"
+    },
+    {
+      "id": "should-trigger-05",
+      "category": "should-trigger",
+      "difficulty": "hard",
+      "prompt": "我们做一个公益项目，但是预算很少，怎么做得有传播力？",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "G 叙事语义 23",
+        "B 时空错位 21",
+        "H 前瞻杠杆"
+      ],
+      "rationale": "公益+低预算，命中 G 23（公益）+ B 21（零预算）+ H 杠杆。"
+    },
+    {
+      "id": "should-trigger-06",
+      "category": "should-trigger",
+      "difficulty": "medium",
+      "prompt": "我想做一支 hero film 出来，要感动人心。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "G 叙事语义 24",
+        "D 性格置换 57"
+      ],
+      "rationale": "hero film+感动，命中 G 24 + D 57 唯情不变。"
+    },
+    {
+      "id": "should-trigger-07",
+      "category": "should-trigger",
+      "difficulty": "easy",
+      "prompt": "想用 72 变的方法给我们的品牌洗个牌看看。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "random draw"
+      ],
+      "rationale": "用户直接点名使用本 skill。"
+    },
+    {
+      "id": "should-trigger-08",
+      "category": "should-trigger",
+      "difficulty": "medium",
+      "prompt": "我们要做一个复古怀旧感的产品发布。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "B 时空错位 58",
+        "B 时空错位 11"
+      ],
+      "rationale": "复古怀旧，命中 B 58 倒退 + B 11 改变时间。"
+    },
+    {
+      "id": "should-trigger-09",
+      "category": "should-trigger",
+      "difficulty": "hard",
+      "prompt": "我想做一个能 viral 的短视频，Z 世代会自发传播那种。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "D 性格置换 08",
+        "H 前瞻杠杆",
+        "F 参与互动"
+      ],
+      "rationale": "viral+Z世代，命中 D 08 魔性 + F 参与 + H 杠杆。"
+    },
+    {
+      "id": "should-trigger-10",
+      "category": "should-trigger",
+      "difficulty": "medium",
+      "prompt": "双 11 我们要做一波传播，想创意。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "H 前瞻杠杆 37 节日",
+        "H 前瞻杠杆 50 改变准备",
+        "H 前瞻杠杆 70 应时而变"
+      ],
+      "rationale": "双11，命中 H 37 节日 + 50 预热 + 70 应时。"
+    },
+    {
+      "id": "should-NOT-trigger-01",
+      "category": "should-not-trigger",
+      "difficulty": "hard-decoy",
+      "prompt": "请 Neil French 帮我写一段文案。",
+      "expected_skill": "master-copywriter",
+      "decoy_reason": "用户已经点名了文案大师，应该直接命中 master-copywriter，不应启动创意选型。",
+      "rationale": "明确点名 Neil French，应该路由到 master-copywriter，不是本 skill。"
+    },
+    {
+      "id": "should-NOT-trigger-02",
+      "category": "should-not-trigger",
+      "difficulty": "easy-decoy",
+      "prompt": "帮我把这段文案润色一下。",
+      "expected_skill": "master-copywriter",
+      "decoy_reason": "已有文案需要润色，是文案修改任务，不是新创意起步。",
+      "rationale": "文案修改，不是创意起步。"
+    },
+    {
+      "id": "should-NOT-trigger-03",
+      "category": "should-not-trigger",
+      "difficulty": "medium-decoy",
+      "prompt": "我要做一张海报的 KV，找个设计方向。",
+      "expected_skill": "wenrouhu-design",
+      "decoy_reason": "KV 是已经确定要做海报，找设计方向不属于本 skill 的创意起步职责。",
+      "rationale": "KV 设计，是视觉产出任务。"
+    },
+    {
+      "id": "should-NOT-trigger-04",
+      "category": "should-not-trigger",
+      "difficulty": "easy-decoy",
+      "prompt": "我要写一个小红书爆款标题。",
+      "expected_skill": "hiccai-xhs",
+      "decoy_reason": "小红书标题属于已有平台的内容创作，不是创意起步。",
+      "rationale": "小红书专属内容，路由到 hiccai-xhs。"
+    },
+    {
+      "id": "should-NOT-trigger-05",
+      "category": "should-not-trigger",
+      "difficulty": "medium-decoy",
+      "prompt": "帮我做一个抖音脚本，60 秒。",
+      "expected_skill": "hiccai-douyin",
+      "decoy_reason": "短视频脚本是已有平台的具体载体任务。",
+      "rationale": "抖音脚本，路由到 hiccai-douyin。"
+    },
+    {
+      "id": "should-NOT-trigger-06",
+      "category": "should-not-trigger",
+      "difficulty": "cross-skill-decoy",
+      "prompt": "我要做品牌定位，怎么找到差异点？",
+      "expected_skill": "dichanfangan",
+      "decoy_reason": "品牌定位是策略层任务，跨到 dichanfangan，不是本 skill 的创意启发。",
+      "rationale": "品牌策略/定位，路由到 dichanfangan 或 hiccai-creative。"
+    },
+    {
+      "id": "boundary-01",
+      "category": "boundary",
+      "difficulty": "ambiguous",
+      "prompt": "我们要做一个新闻发布会，怎么搞出彩？",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "F 参与互动",
+        "H 前瞻杠杆"
+      ],
+      "alternative_skills": [
+        "hiccai-Hook"
+      ],
+      "rationale": "发布会可视为事件营销，属于 F 参与互动。但有出彩诉求可能也涉及 hiccai-Hook 的事件话题。"
+    },
+    {
+      "id": "boundary-02",
+      "category": "boundary",
+      "difficulty": "ambiguous",
+      "prompt": "我想写一个品牌的品牌宣言，3 分钟长视频那种。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "G 叙事语义 59",
+        "G 叙事语义 24"
+      ],
+      "alternative_skills": [
+        "master-copywriter"
+      ],
+      "rationale": "品牌宣言涉及长文案（G 59）和长视频（G 24），文案最终执行由 master-copywriter 接管。"
+    },
+    {
+      "id": "boundary-03",
+      "category": "boundary",
+      "difficulty": "ambiguous",
+      "prompt": "我们想做一波 micro-influencer 投放，找什么样的达人合适？",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "E IP 与关系 42",
+        "E IP 与关系 15"
+      ],
+      "alternative_skills": [
+        "recommend-connectors"
+      ],
+      "rationale": "创意方向上属于 E 42 代言 / 15 同类。具体的 KOL 选择可由 recommend-connectors 给出实际数据。"
+    },
+    {
+      "id": "boundary-04",
+      "category": "boundary",
+      "difficulty": "ambiguous",
+      "prompt": "我要写一个有钩子的开头，吸引人 3 秒点进来。",
+      "expected_skill": "hiccai-Hook",
+      "alternative_skills": [
+        "creative-72-transformations"
+      ],
+      "rationale": "钩子（hook）是传播入口技巧，主要归 hiccai-Hook。但如果用户是从创意起步找方向，本 skill 也可承担。"
+    },
+    {
+      "id": "diversity-01",
+      "category": "diversity",
+      "difficulty": "hard",
+      "prompt": "百事可乐成都夏季战役，给我创意方向。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "至少 3 个不同族（如 A/F/G/C/B），禁止只出 H62+D08 方言神曲一个方向"
+      ],
+      "rationale": "多样性强制检查：同一 brief 必须出 ≥2 个不同族方向，防止路径依赖（方言神曲换皮）"
+    },
+    {
+      "id": "diversity-02",
+      "category": "diversity",
+      "difficulty": "hard",
+      "prompt": "再来一个百事广州夏季战役的创意，和上次不一样的方向。",
+      "expected_skill": "creative-72-transformations",
+      "expected_theme_hint": [
+        "与上次选择 ≥2 张卡重复时必须换族"
+      ],
+      "rationale": "防路径依赖开关：连续 brief 不得复用同一组合"
+    }
+  ],
+  "summary": {
+    "total_prompts": 20,
+    "should_trigger": 10,
+    "should_not_trigger": 6,
+    "boundary": 4,
+    "coverage": [
+      "A 形性重构",
+      "B 时空错位",
+      "C 视角重置",
+      "D 性格置换",
+      "E IP 与关系",
+      "F 参与互动",
+      "G 叙事语义",
+      "H 前瞻杠杆"
+    ],
+    "decoy_coverage": [
+      "master-copywriter (3 prompts)",
+      "hiccai-xhs / hiccai-douyin (2)",
+      "wenrouhu-design (1)",
+      "dichanfangan (1)"
+    ],
+    "expected_pass_rate": "≥ 85%"
+  }
+}

@@ -9,11 +9,11 @@ description: >-
   触发词：hiccai-creative、品牌提案、创意方案、小红书方案、爆款标题、创意故事、洞察、传播脚本、
   新媒体全案、内容策略、裂变创意、广告全案、策略定位、Big Idea、AI图像prompt、
   brand pitch、creative strategy。
-  创意方向生产依赖 creative-72-transformations（选族选卡），创意方法论依赖 references/creative-methods/。
+  创意方向生产依赖 references/creative-72-transformations/（选族选卡），创意方法论依赖 references/creative-methods/。
 license: MIT
 metadata:
   author: Caiwenbin
-  version: 2.4.0
+  version: 2.4.1
   created: 2026-07-01
   last_reviewed: 2026-08-10
   review_interval_days: 90
@@ -326,7 +326,7 @@ metadata:
 > **铁律：这一步只交付「3 个创意方向」，不交付脚本、不交付标题、不交付文案。** 脚本/标题是第二步以后的事。
 
 **0️⃣ 前置：调用创意72变**（本模式的方向生产器，强制，不可跳过）：
-- 加载 `creative-72-transformations` 母索引，按 brief 走「选族 → 选卡」逻辑
+- 加载 `references/creative-72-transformations/SKILL.md` 母索引，按 brief 走「选族 → 选卡」逻辑
 - 用「多样性强制检查」挑出 **3 个不同族**的卡组合（如 A 形性 + G 叙事 + C 视角，禁同族换皮）
 - 每个方向标注：**用了哪张卡 + 为什么这张卡**（保证方向差异是「族」级的，不是换个说法）
 
@@ -383,7 +383,7 @@ metadata:
 **一句话创意 + 核心画面 + 文案标题（≤20字）+ 15秒脚本 + 品牌落点 + 社交钩子**（Step 5 的六件套）。洞察诊断、变形选择都是内部步骤，不进交付正文。
 
 ### 前置：调用创意72变（与模式四一致，强制）
-进入 Step 3 表达变形前，加载 `creative-72-transformations`，为「事故感」选 1 张卡做变形方向参考（如幽默化→D 性格、视觉化→A 形性、反转化→G 叙事），保证变形有 72 变卡背书而非随意发挥。
+进入 Step 3 表达变形前，加载 `references/creative-72-transformations/SKILL.md`，为「事故感」选 1 张卡做变形方向参考（如幽默化→D 性格、视觉化→A 形性、反转化→G 叙事），保证变形有 72 变卡背书而非随意发挥。
 
 ### 洞察的本质
 洞察不是发现新东西，而是命名老现象。
@@ -520,19 +520,21 @@ metadata:
 
 | 触发场景 | 加载 sub-skill | 核心动作 |
 |---|---|---|
+| **要「创意方向 / 洗牌 / 换角度」** | `references/creative-72-transformations/SKILL.md`（含 themes/ 8 族） | 72 变选族选卡，产出 2-3 个不同族方向 |
 | 拿到 brief / 现象 → 出 Big Idea | `references/creative-methods/young-five-steps/` | 5 步流程（吸收→咀嚼→孵化→产出→检验） |
 | 要「刷屏 / 出圈 / 病毒」诉求 | `references/creative-methods/gladwell-tipping/` | 三法则（个别人物 / 附着力 / 环境威力） |
 | 要「品牌提案 / 让人记住 / 长文案」 | `references/creative-methods/heath-stickiness/` | SUCCESs 六原则 |
 
-**三本经典对应本 skill 的三大能力：**
+**方法资产（全部内置于本仓库 references/ 下，clone 即得）：**
+- 《创意72变》卡牌 72 张（8 族）→ 创意方向生产器（how to ideate）
 - 《创意的生成》(Young, 1940) → 洞察转创意（how to generate）
 - 《引爆点》(Gladwell, 2000) → 病毒故事传播（how to spread）
 - 《让创意更有黏性》(Heath, 2007) → 首席提案官（how to stick）
 
-工作流建议：**Young 出 Big Idea → Gladwell 设计传播 → Heath 检验黏性**（三本可叠加使用）。
+工作流建议：**72变 出方向 → Young 生成 Big Idea → Gladwell 设计传播 → Heath 检验黏性**（可叠加使用）。
 
 ---
 
 ## 版本
 
-`v2.4.0` — 2026-08-10 第一性原理修复：新增交付总纲（成品优先/不越级/工具内部化）、模式判断加模糊请求兜底、5 模式补第一步交付物定义、模式五接入 72变。
+`v2.4.1` — 2026-08-10 将《创意72变》全套（16 文件，含 8 族 themes/）并入本仓库 references/creative-72-transformations/，hiccai-creative 自包含全部方法资产。

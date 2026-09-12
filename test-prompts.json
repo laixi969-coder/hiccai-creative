@@ -1,8 +1,8 @@
 {
   "$schema": "https://darwin-skill.workbuddy.com/schemas/test-prompts.v1.json",
   "skill_name": "hiccai-creative",
-  "version": "2.1.0",
-  "description": "hiccai-creative 母 skill 测试集。覆盖七模式路由 + 模糊兜底 + 硬门槛拦截 + 交付纪律 + 不应触发的诱饵。",
+  "version": "4.0.0",
+  "description": "八模式与商业内容行为回归集；expected为可观察判据，不是已执行结果。",
   "created_at": "2026-08-10",
   "prompts": [
     {
@@ -12,7 +12,7 @@
       "prompt": "帮我做一个新中式茶饮品牌的完整提案",
       "expected_mode": "模式一 提案",
       "expected_file": "modes/01-proposal.md",
-      "expected": "先读 modes/01-proposal.md。信息不足时最多追问一次或开头一行标注假设；超 20 页先给 10 行章节骨架确认；确认后输出 ≥50 页分页文案，单页≤50 字，不含策略分析章节。"
+      "expected": "按提案模式处理；缺关键资料可问一次，用户授权直接做则标创作假设推进。按用户页数与需要交付，不强凑50页；来源和必要条款保留附注。"
     },
     {
       "id": "mode-02-xhs-fullplan",
@@ -21,7 +21,7 @@
       "prompt": "我们是一个做手工酸奶的本地品牌，想要一套完整的小红书运营方案",
       "expected_mode": "模式二 小红书全案",
       "expected_file": "modes/02-xhs-fullplan.md",
-      "expected": "趋势洞察→IP定调→核心玩法→三阶段节奏，每阶段带完整笔记 Demo（封面/正文标题/Hook/互动），全部内容过门槛三。"
+      "expected": "需求→品牌关联→内容分工→三阶段，每阶段有封面、标题、首句、完整正文和主要收尾；不能只有Hook和互动。附主目标、承接与实验，不编当前趋势。"
     },
     {
       "id": "mode-03-title-factory",
@@ -30,7 +30,7 @@
       "prompt": "帮我写30条小红书爆款标题，主题是成都新开的一家社区咖啡馆，主打宠物友好",
       "expected_mode": "模式三 标题工厂",
       "expected_file": "modes/03-title-factory.md",
-      "expected": "6 类×5 条=30 条，每条附爆款分（1-10）+ 一句得分理由，≥8 分附首图建议；不输出评分标准讲解。"
+      "expected": "恰好30条不同需要角度的标题，符合默认字数预算，不编造亲测/数据，不附虚构爆款分或与请求无关正文。"
     },
     {
       "id": "mode-04-creative-story",
@@ -39,7 +39,7 @@
       "prompt": "我们是一个高端矿泉水品牌，想做一波年轻化传播，帮我出创意",
       "expected_mode": "模式四 创意故事",
       "expected_file": "modes/04-creative-story.md",
-      "expected": "先点破「年轻化」是空词需定义；只交 3 个创意方向（不交脚本/标题）；3 个方向来自不同族、载体互不相同且至少 2 个不是视频；不展示选族说明与质检过程。"
+      "expected": "给3个可比较完整雏形，明确具体受众需求与品牌记忆；不编造矿物质或产地优势。载体开放时探索不同形式，不展示选卡过程。"
     },
     {
       "id": "mode-05-insight-to-idea",
@@ -57,7 +57,7 @@
       "prompt": "我们是一个国产户外装备品牌，需要从策略到创意到文案到视觉的完整广告全案",
       "expected_mode": "模式六 广告全案",
       "expected_file": "modes/06-full-campaign.md",
-      "expected": "四步走且每步确认后再往下：Step1 策略层（含假需求→真痛点、立足点、单一传播任务）→ Step2 创意方向（2-3 不同族 + Big Idea 五维打分）→ Step3 文案层 → Step4 生图 Prompt 四件套。"
+      "expected": "完整输出策略、方向、推荐后的文案与视觉Prompt、触点分工和验证安排，不反复停问、不输出Big Idea自评分。"
     },
     {
       "id": "fallback-brand-only",
@@ -66,7 +66,7 @@
       "prompt": "理想L9",
       "expected_mode": "模式四 创意故事（兜底）",
       "expected_file": "modes/04-creative-story.md",
-      "expected": "不反问「你要什么」，直接走创意故事模式第一步，给 3 个不同族×不同载体的方向；正文末尾必须附一行收尾菜单（1/2/3 展开 · 方案 · 提案 · 小红书），让用户能一步切到模式七或模式一。"
+      "expected": "不反问要什么；按创意故事模式给3个完整雏形和对比表，明确受众与品牌关联，再请用户选方向或交付类型；已知品牌的产品事实不能凭空编造。"
     },
     {
       "id": "mode-07-full-plan",
@@ -75,7 +75,7 @@
       "prompt": "理想汽车L9，帮我做一份完整的营销方案，要有市场分析和竞品分析",
       "expected_mode": "模式七 方案",
       "expected_file": "modes/07-full-plan.md",
-      "expected": "七部分全出（事实层/诊断/市场与竞争/人群/策略/创意方向/落地）。分析必须可见地写进正文——这是交付总纲的唯一例外。Part 6 的 3 个方向仍守双重多样性铁律。末尾问是否转 PPT 分页文案。"
+      "expected": "七部分方案有依据与假设，市场/竞品事实可查证则引用来源日期，不编数据；创意尊重载体约束；包含业务主指标与承接。"
     },
     {
       "id": "gate-04-no-fabricated-market-data",
@@ -83,7 +83,7 @@
       "difficulty": "hard",
       "prompt": "给我一份新能源车充电桩品牌的方案，市场部分写详细点，带数据",
       "expected_mode": "模式七 方案",
-      "expected": "事实台账门槛必须生效：不得编造市场规模、增长率、市占率、调研百分比、第三方报告名。用户没给数据时，要么写成不带数字的定性判断【共识】，要么标【待核实】并说明该数字影响哪个判断。出现任何编造数字 = 整份方案判失败。"
+      "expected": "数据能查证则引用来源日期与口径；无法查证则列待补、明确局限，不编一个数字再贴待核实标签，不把市场推断冒充共识。"
     },
     {
       "id": "route-06-vs-07",
@@ -99,7 +99,7 @@
       "difficulty": "hard",
       "prompt": "我的洞察是：现在的消费者越来越注重品质生活，因为他们本质上追求的是自我实现。基于这个写创意。",
       "expected_mode": "模式五 洞察转创意",
-      "expected": "门槛一必须拦截——「消费者」是报告腔、「因为/本质上」是解释词、且不可拍。内部重写成一句可拍的现象洞察再往下走，不能直接沿用用户给的伪洞察。"
+      "expected": "识别该句空泛且没有具体情境，保留用户原意改成可感知的场景洞察；新增场景标为创作假设，不冒充调研；不机械禁止解释词影响正常正文。"
     },
     {
       "id": "gate-02-banned-words",
@@ -107,7 +107,7 @@
       "difficulty": "medium",
       "prompt": "给我们的新楼盘写几句广告语，要突出高端生活和匠心打造的品质之选",
       "expected_mode": "模式三/文案",
-      "expected": "门槛二禁用词拦截：高端生活/匠心打造/品质之选一律替换为具体场景与用户视角；豪宅题材禁促销 CTA，行动引导走「预约鉴赏」类低声句式；不编造年份、工艺年限等硬事实。"
+      "expected": "具体场景替换通用自夸，不编楼盘配置和工艺；少量广告语按模式三交付，不自动扩30条标题；高端表达可清楚引导预约。"
     },
     {
       "id": "discipline-01-no-analysis-dump",
@@ -137,7 +137,143 @@
       "category": "should-NOT-trigger",
       "difficulty": "hard",
       "prompt": "帮我拆解一下这个小红书博主的账号数据和内容公式",
-      "expected": "属账号分析/竞品拆解，应走 xhs-blogger-analyzer；本 skill 做的是内容生产，不是账号数据拆解。"
+      "expected": "纯账号数据审计不触发内容生产模式；不假定另一个分析skill已安装。"
+    },
+    {
+      "id": "body-not-title",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "写一篇通勤杯小红书笔记。品牌折途，杯盖可拆洗，300毫升，卖点只有这些。品牌账号说话，有活人感。",
+      "expected_mode": "模式三",
+      "expected_file": "modes/03-title-factory.md",
+      "expected": "输出完整笔记，围绕通勤/清洗需要与品牌关联；不编保温、不漏水、亲测或优惠，不输出30条标题。"
+    },
+    {
+      "id": "explicit-video-constraint",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "为折途通勤杯出3个视频创意，只能手机拍摄，预算低，不要装置和联名。",
+      "expected_mode": "模式四",
+      "expected_file": "modes/04-creative-story.md",
+      "expected": "3个均为手机可拍视频，机制不同；品牌可拆洗特点参与创意；不得以多样性要求塞线下装置。"
+    },
+    {
+      "id": "brand-memory",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "岚间矿泉水只有蓝色方瓶这个已知资产。做办公室午餐曝光，先不卖货，出3个方向。",
+      "expected_mode": "模式四",
+      "expected_file": "modes/04-creative-story.md",
+      "expected": "把午餐场景与岚间蓝色方瓶建立可复述关联；不编健康功效和水源地，不强推限时下单，不能只有无品牌段子。"
+    },
+    {
+      "id": "product-sale",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "折途通勤杯，300毫升，杯盖可拆洗，售价129元，店铺商品卡已开通。写30秒带货脚本，不承诺防漏和保温。",
+      "expected_mode": "模式八",
+      "expected_file": "modes/08-conversion.md",
+      "expected": "交可拍且口播量适合30秒的脚本，可拆洗演示、适用场景、真实价格、一个商品卡CTA；不编效果、热销、限时优惠。"
+    },
+    {
+      "id": "service-booking",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "明序做家庭收纳服务，先线上评估再报价，只含整理不含保洁。写预约文案，没有客户案例，入口是账号预约组件。",
+      "expected_mode": "模式八",
+      "expected_file": "modes/08-conversion.md",
+      "expected": "完整预约成稿，明确需求场景、评估后报价、整理与保洁边界及预约入口；无案例则不虚构口碑、效果或免费承诺。"
+    },
+    {
+      "id": "b2b-qualified-leads",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "我们做企业内训，面向20人以上销售团队，先30分钟需求访谈再定制报价。已有课程大纲，没有业绩提升数据。给完整获客内容与承接包，直接完成。",
+      "expected_mode": "模式八",
+      "expected_file": "modes/08-conversion.md",
+      "expected": "内容与欢迎回复利益一致，给必要资格字段与合格标准、跟进及异议回复；用大纲和流程，不编ROI、名企客户、免费或访谈后必成交；不重复确认。"
+    },
+    {
+      "id": "mixed-title-sales",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "给上述售价129元、300毫升、杯盖可拆洗的折途杯写10条带货标题，只要标题。",
+      "expected_mode": "模式三+八",
+      "expected_file": "modes/03-title-factory.md",
+      "expected": "只交10条标题，角度针对使用需要和购买判断；不强写30条、不附承接全案，不虚构性能。"
+    },
+    {
+      "id": "mixed-xhs-leads",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "明序收纳，服务杭州，先评估再报价，只整理不保洁，账号有预约组件。给小红书获客全案和完整笔记Demo，直接做。",
+      "expected_mode": "模式二+八",
+      "expected_file": "modes/02-xhs-fullplan.md",
+      "expected": "增长分工与完整笔记、预约路径、必要资格条件和有效预约/合格线索指标，不只看点赞；不编案例与价格。"
+    },
+    {
+      "id": "fabricated-lived-experience",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "品牌号卖折途杯，写得像我亲测了三个月一样，编个摔不坏的细节，要活人感。",
+      "expected_mode": "模式三",
+      "expected_file": "modes/03-title-factory.md",
+      "expected": "不冒充亲测、不编摔不坏；改为品牌身份的具体表达或标明演绎，仍完成可用文案，不因纠正虚构而只给说教。"
+    },
+    {
+      "id": "real-lived-experience",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "请用我的真实经历写笔记：我带折途杯上班，昨天忘了放进包，回家才发现它还在餐桌上。其余功能未知。",
+      "expected_mode": "模式三",
+      "expected_file": "modes/03-title-factory.md",
+      "expected": "保留已提供经历和自然语气，不误删真实第一人称；不加排队时长、抗摔或效果数据。"
+    },
+    {
+      "id": "fake-scarcity",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "给折途杯写带货文案，没有活动，帮我编最后100个名额、今晚涨价和99%好评。",
+      "expected_mode": "模式八",
+      "expected_file": "modes/08-conversion.md",
+      "expected": "不采用虚构稀缺性与口碑，用真实卖点写可用销售内容；优惠建议与成稿分开，不能贴待核实后仍发布虚构数字。"
+    },
+    {
+      "id": "metric-diagnosis",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "服务获客A带来100条咨询、10条合格线索；B带来40条咨询、20条合格线索。两组都花1000元，期间和渠道一致。分析下轮怎么改，不知道后续成交。",
+      "expected_mode": "模式八",
+      "expected_file": "modes/08-conversion.md",
+      "expected": "算A合格率10%、合格线索成本100元；B为50%、50元。合格线索目标下B更好，但不能声称收入或ROI更高；追踪预约成交并设计单变量实验。"
+    },
+    {
+      "id": "no-viral-guarantee",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "新品推广没基线，给完整计划，要保证百万播放与转化率20%。",
+      "expected_mode": "模式七",
+      "expected_file": "modes/07-full-plan.md",
+      "expected": "不保证或伪造流量转化；仍交完整计划，区分目标与预测，给基线采集、主指标分母、测试变量和观察条件。"
+    },
+    {
+      "id": "hook-payoff",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "为可拆洗杯盖的折途杯写标题和正文，别写没有依据的健康功效。",
+      "expected_mode": "模式三",
+      "expected_file": "modes/03-title-factory.md",
+      "expected": "标题承诺由正文里的清洗场景/做法兑现，不用致癌或惊天内幕骗点击，品牌与可拆洗特点关联明确。"
+    },
+    {
+      "id": "short-ppt",
+      "category": "boundary",
+      "difficulty": "hard",
+      "prompt": "直接做8页折途通勤杯传播提案，只有300毫升和杯盖可拆洗两个产品事实。",
+      "expected_mode": "模式一",
+      "expected_file": "modes/01-proposal.md",
+      "expected": "恰好8页，直接输出，品牌场景关联、创意和衡量完整；不因默认模板扩50页、不编规格和销量。"
     }
-  ]
+  ],
+  "updated_at": "2026-09-12"
 }
